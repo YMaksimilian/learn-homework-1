@@ -32,7 +32,7 @@ def main():
       else: 
         return "работать"
     result = analize_age(age)
-    print(f"В возрасте {age} лет ты должен {result}.")
+    print(f"В возрасте {age} лет ты должен {result}!")
 
 if __name__ == "__main__":
     main()
