@@ -20,7 +20,17 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    def check_text(x, y):
+        if type(x) != str and type(y) != str:
+            return 0
+        elif type(x) == (y):
+            return 1
+        elif len(x) > len(y) and y != "learn":
+            return 2
+        elif y == "learn":
+            return 3
+      
+    print(check_text("adfdafadfad", "learn"))
     
 if __name__ == "__main__":
     main()
