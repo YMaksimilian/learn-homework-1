@@ -15,13 +15,19 @@
     
 """
 
-questions_and_answers = {}
+answers = {"Как дела?": "Хорошо!", "Что делаешь?": "Программирую", "Ты где был?": "Бегал", "Ты почему такой дерзкий?": "Какой есть"}
 
-def ask_user(answers_dict):
+def ask_user():
     """
     Замените pass на ваш код
     """
-    pass
+    answers_key = list(answers.keys()) # Сразу создадим список, который будет содержать все ключи (базу вопросов) словаря.
+    while True:
+      question = input("Задай свой вопрос. ")
+      if question in answers_key:
+        print(f"{answers[question]}") 
+    
+    
     
 if __name__ == "__main__":
-    ask_user(questions_and_answers)
+    ask_user()

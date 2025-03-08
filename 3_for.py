@@ -21,6 +21,23 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
+    sales = [
+    {'product': 'iPhone 12', 'items_sold': [363, 500, 224, 358, 480, 476, 470, 216, 270, 388, 312, 186]}, 
+    {'product': 'Xiaomi Mi11', 'items_sold': [317, 267, 290, 431, 211, 354, 276, 526, 141, 453, 510, 316]},
+    {'product': 'Samsung Galaxy 21', 'items_sold': [343, 390, 238, 437, 214, 494, 441, 518, 212, 288, 272, 247]},
+  ]
+    total_sales = [] # Список, в который будет добавляться сумма продаж по каждой категории
+    all_sales = [] # Общий список продаж по всем товарам
+    for phones in sales:
+        total_sold = sum(phones["items_sold"]) # Находим суммарное количество продаж для каждого товара
+        total_sales.append(total_sold) # В этой строке в созданный список мы добавляем сумму продаж по каждой категории товара
+        print(f"Всего было продано {total_sold} {phones["product"]}") 
+        average = sum(phones["items_sold"])/len(phones["items_sold"]) # Считаем среднее кол-во продаж для каждого товара
+        print(f"В среднем продавалось {average} {phones["product"]}")
+        all_sales.extend(phones["items_sold"]) # В этой строке формируем общий список из всех items_sold
+        all_average = sum(total_sales) / len(all_sales) # Считаем среднее кол-во продаж всех товаров
+    print(f"Всего было продано {sum(total_sales)} смартфонов.")
+    print(f"Среднее количество всех продаж составляет {all_average}")
     pass
     
 if __name__ == "__main__":

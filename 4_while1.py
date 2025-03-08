@@ -14,6 +14,10 @@ def hello_user():
     """
     Замените pass на ваш код
     """
+    while True:
+        question = input("Как дела? ")
+        if question == "Хорошо":
+            break
     pass
 
     
